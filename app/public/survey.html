@@ -11,7 +11,9 @@
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4">Create New Profile</h1>
-            <p class="lead">Find a new teammate or a whole new team, if looking for an individual fill out questions after "Searching for:" </p>
+            <p class="lead">Find a new teammate or a whole new team, if looking for an individual, fill out questions after "Searching for:" with answers that
+                match the player you are looking for.
+            </p>
         </div>
     </div>
     
@@ -171,7 +173,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="q8">Do you prefer a playstyle which is more direct or more passing oriented? (1 most direct, 5 Most patient)</label>
+                        <label for="q8">Do you prefer a playstyle which is more direct or more passing oriented? (1 most direct, 5 most patient)</label>
                         <select class="form-control" id="q8">
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -182,16 +184,27 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="q9">Are you looking for an organized competitive league?</label>
+                        <label for="q9">Are you looking to play in a league?</label>
                         <select class="form-control" id="q9">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
+                            <option value="1">No, just looking to casually kick around.</option>
+                            <option value="2">No, just looking for a pickup game.</option>
+                            <option value="3">Yes, organized competitive league, playing in the lowest division.</option>
+                            <option value="4">Yes, organized competitive league, playing in second division</option>
+                            <option value="5">Yes, organized competitive league, playing in top division</option>
                         </select>
                     </div>
-                                   
+
+                    <div class="form-group">
+                        <label for="q10">Willing to pay to play in a league?</label>
+                        <select class="form-control" id="q10">
+                            <option value="1">No</option>
+                            <option value="2">Yes, max $20.</option>
+                            <option value="3">Yes, max $40.</option>
+                            <option value="4">Yes, max $60</option>
+                            <option value="5">Yes, mac $80</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block submit">Submit</button>      
                 </form>
             </div>
         </div>
