@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>FutbolerFinder</title>
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Create New Profile</h1>
+            <p class="lead">Find a new teammate or a whole new team, if looking for an individual fill out questions after "Searching for:" </p>
+        </div>
+    </div>
+    
+    <div class="container">    
+        <div class="row">
+            <div class="col-sm-12">
+                <form>
+                    
+                    <div class="form-row">
+                        <div class="form-group col-6">
+                            <input type="name" class="form-control" id="firstName" placeholder="First Name">
+                        </div>
+                        <div class="form-group col-6">
+                            <input type="name" class="form-control" id="lastName" placeholder="Last Name">
+                        </div>
+                    </div>
+                   
+                    <div class="form-row">
+                        <div class="form-group col-6">
+                            <input type="email" class="form-control" id="email" placeholder="Your Email, so a potenital match can contact you.">
+                        </div>
+                        <div class="form-group col-6">
+                            <input type="city" class="form-control" id="city" placeholder="The city you are in.">
+                        </div>
+                    </div>
+                    
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <label for="age">Age:</label>
+                                <select class="form-control" id="age">
+                                    <option value="14-18">14-18</option>
+                                    <option value="19-24">19-24</option>
+                                    <option value="25-30">25-30</option>
+                                    <option value="30-40">30-40</option>
+                                    <option value="40-over">40+</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="searchingFor">Searching for:</label>
+                                <select class="form-control" id="searchingFor">
+                                    <option value="individual">Individual Player</option>
+                                    <option value="txeam">Team</option>
+                                </select>
+                            </div>
+                        </div>
+                    
+
+                    <div class="form-group">
+                        <label>Availability by day:</label>
+                        
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="checkbox1" value="">
+                            <label class="form-check-label" for="inlineCheckbox1">Monday</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="checkbox2" value="">
+                            <label class="form-check-label" for="inlineCheckbox2">Tuesday</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="checkbox3" value="">
+                            <label class="form-check-label" for="inlineCheckbox3">Wednesday</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="checkbox4" value="">
+                            <label class="form-check-label" for="inlineCheckbox3">Thursday</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="checkbox5" value="">
+                            <label class="form-check-label" for="inlineCheckbox3">Friday</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="checkbox6" value="">
+                            <label class="form-check-label" for="inlineCheckbox3">Saturday</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="checkbox7" value="y">
+                            <label class="form-check-label" for="inlineCheckbox3">Sunday</label>
+                        </div>
+                    
+                    </div>
+
+                    <div class="form-group">
+                        <label for="q1">Rate your experience level with soccer</label>
+                        <select class="form-control" id="q1">
+                            <option value="1">No experience at all.</option>
+                            <option value="2">Kicked a ball around but never played a game.</option>
+                            <option value="3">Played youth soccer.</option>
+                            <option value="4">Played for a club/highschool.</option>
+                            <option value="5">Former Collegiate Player.</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="q2">Rate your current playing frequency</label>
+                        <select class="form-control" id="q2">
+                            <option value="1">Haven't played in years.</option>
+                            <option value="2">Last played sometime in the past year or so.</option>
+                            <option value="3">Last played a few month ago.</option>
+                            <option value="4">Play once a week.</option>
+                            <option value="5">Currently playing/training multiple times a week.</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="q3">Rate your commitment level</label>
+                        <select class="form-control" id="q3">
+                            <option value="1">I can make it to one thing that I commit to.</option>
+                            <option value="2">I'll be able to make a few scheduled events.</option>
+                            <option value="3">I'll likely make about half of the scheduled events.</option>
+                            <option value="4">I may need to miss one scheduled event here and there.</option>
+                            <option value="5">I'll be at every scheduled event with time to warm up.</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="q4">Rate your level of seriousness</label>
+                        <select class="form-control" id="q4">
+                            <option value="1">Just looking to have a good time and get exercise.</option>
+                            <option value="2">Looking to play well but the result is not important</option>
+                            <option value="3">I do my best and if we win we win, if we lose, we lose.</option>
+                            <option value="4">I typically give it my all and enjoy winning games.</option>
+                            <option value="5">I'm a competitor who will work to win every game possible.</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="q5">Rate your current level of fitness</label>
+                        <select class="form-control" id="q5">
+                            <option value="1">Out of Shape.</option>
+                            <option value="2">Not fit but wokring on it.</option>
+                            <option value="3">Able to wokr hard but will need a sub sooner than later.</option>
+                            <option value="4">Moderately fit</option>
+                            <option value="5">Very fit</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="q6">Your offensive workrate: (1 lowest, 5 maximum)</label>
+                        <select class="form-control" id="q6">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">5</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="q7">Your defensive workrate: (1 lowest, 5 maximum)</label>
+                        <select class="form-control" id="q7">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="q8">Do you prefer a playstyle which is more direct or more passing oriented? (1 most direct, 5 Most patient)</label>
+                        <select class="form-control" id="q8">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="q9">Are you looking for an organized competitive league?</label>
+                        <select class="form-control" id="q9">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                                   
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
