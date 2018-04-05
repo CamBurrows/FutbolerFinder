@@ -5,16 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <title>FutbolerFinder</title>
 </head>
 <body>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4">Create New Profile</h1>
-            <p class="lead">Find a new teammate or a whole new team, if looking for an individual, fill out questions after "Searching for:" with answers that
-                match the player you are looking for.
+            <p class="lead">Find a new teammate or a whole new team. If looking for an individual, fill out the questions after "Searching for:" with answers that
+                describe the player you are looking for.
             </p>
+            <a href="/">
+                <button type="button" class="btn btn-warning">Home</button>
+            </a> 
         </div>
     </div>
     
@@ -25,19 +33,19 @@
                     
                     <div class="form-row">
                         <div class="form-group col-6">
-                            <input type="name" class="form-control" id="firstName" placeholder="First Name">
+                            <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
                         </div>
                         <div class="form-group col-6">
-                            <input type="name" class="form-control" id="lastName" placeholder="Last Name">
+                            <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
                         </div>
                     </div>
                    
                     <div class="form-row">
                         <div class="form-group col-6">
-                            <input type="email" class="form-control" id="email" placeholder="Your Email, so a potenital match can contact you.">
+                            <input type="email" class="form-control" id="email" placeholder="Your Email, so a potenital match can contact you." required>
                         </div>
                         <div class="form-group col-6">
-                            <input type="city" class="form-control" id="city" placeholder="The city you are in.">
+                            <input type="text" class="form-control" id="city" placeholder="The city you are in." required>
                         </div>
                     </div>
                     
@@ -145,7 +153,7 @@
                         <select class="form-control" id="q5">
                             <option value="1">Out of Shape.</option>
                             <option value="2">Not fit but wokring on it.</option>
-                            <option value="3">Able to wokr hard but will need a sub sooner than later.</option>
+                            <option value="3">Able to work hard but will need a sub sooner than later.</option>
                             <option value="4">Moderately fit</option>
                             <option value="5">Very fit</option>
                         </select>
@@ -157,7 +165,7 @@
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
-                            <option value="4">5</option>
+                            <option value="4">4</option>
                             <option value="5">5</option>
                         </select>
                     </div>
@@ -202,7 +210,7 @@
                             <option value="2">Yes, max $20.</option>
                             <option value="3">Yes, max $40.</option>
                             <option value="4">Yes, max $60</option>
-                            <option value="5">Yes, mac $80</option>
+                            <option value="5">Yes, max $80</option>
                         </select>
                     </div>
                     <button type="submit" class="btn btn-primary btn-lg btn-block submit">Submit</button>      
@@ -211,7 +219,57 @@
         </div>
     </div>
 
-<script type="text/javascript">
+    <div class="modal fade bd-example-modal-lg" id="matchModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="padding:10px">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" style="padding:20px">
+                
+                <div class="row">
+                    <div class="col-sm-12" style="text-align:center">
+                        <h1>Top Match</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2><span id="displayName1"></span><span id="displayName2"></span></h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2><span id="displayEmail"></span></h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2><span id="displayCity"></span></h2>
+                    </div>
+                    <div class="col-sm-6">
+                        <h2><span id="displayAge"></span></h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2><span id="displaySearchingFor"></span></h2>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+   
+   <script type="text/javascript">
+    // $('#matchModal').modal({ show: false})
+
     $(".survey").on("submit", function(event){
         event.preventDefault();
         var newProfile = {
@@ -223,16 +281,16 @@
                 searchingFor: $("#searchingFor").val().trim(),
                 // days: $("#checkbox1").val(),
                 questions: [
-                parseInt($("#q1").val().trim()),
-                parseInt($("#q2").val().trim()),
-                parseInt($("#q3").val().trim()),
-                parseInt($("#q4").val().trim()),
-                parseInt($("#q5").val().trim()),
-                parseInt($("#q6").val().trim()),
-                parseInt($("#q7").val().trim()),
-                parseInt($("#q8").val().trim()),
-                parseInt($("#q9").val().trim()),
-                parseInt($("#q10").val().trim()),
+                $("#q1").val().trim(),
+                $("#q2").val().trim(),
+                $("#q3").val().trim(),
+                $("#q4").val().trim(),
+                $("#q5").val().trim(),
+                $("#q6").val().trim(),
+                $("#q7").val().trim(),
+                $("#q8").val().trim(),
+                $("#q9").val().trim(),
+                $("#q10").val().trim()
                 ]
         };
     
@@ -240,6 +298,25 @@
         .then(function(data){
             console.log(data)
         });
+        
+        $.get("/api/match", function (data) {
+            console.log("match data: " + data)
+            
+            if (data != 'undefined'){
+                $("#displayName1").text("Name: " + data.firstName)
+                $("#displayName2").text(" " + data.lastName)
+                $("#displayEmail").text("Email: " + data.email)
+                $("#displayCity").text("City: " + data.city)
+                $("#displayAge").text("Age: " + data.age)
+                $("#displaySearchingFor").text("Searching For: " + data.searchingFor)
+            }
+            else {
+                $("#displayName1").text("No entries in database to match with")
+            }
+        });
+
+        $('#matchModal').modal('show')
+        
     });
 
 </script>
