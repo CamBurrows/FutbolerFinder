@@ -1,5 +1,9 @@
 # FutbolerFinder
-An app that finds users a soccer player who lives up to their expectations.
+An app that finds users a soccer player who lives up to their expectations. Either search for a new team, or aan individual for your team, and find the ideal match who has also entered their preferences in the app.
 
-#TA note
-If you are currently reading this I wouldn't try to grade this assignment. I have been having some issues with this one and it is not at all complete yet, and has not been deployed to heroku. I will take the low grade and continue working on this one, and inform you when I submit, thanks!
+# Future Plans
+-Utilize location as primary filter for results.
+-Display top 3 instead of best match
+-Implement better input validation
+-Implement UI feature to return error message for first user to search app with empty database.
+
