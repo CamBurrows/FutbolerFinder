@@ -1,0 +1,26 @@
+{
+  "name": "futbolerfinder",
+  "version": "1.0.0",
+  "description": "An app that finds users a soccer player who lives up to their expectations.",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CamBurrows/FutbolerFinder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CamBurrows/FutbolerFinder/issues"
+  },
+  "homepage": "https://github.com/CamBurrows/FutbolerFinder#readme"
+}
